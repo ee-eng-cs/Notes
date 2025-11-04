@@ -1,6 +1,6 @@
 # Notes
 
-- [Design Patterns](./DesignPatterns.md
+- [Design Patterns](./DesignPatterns.md)
 - [EJB](./EJB.md)
 - [Java](./Java.md)
 - [Kafka](./Kafka.md)
