@@ -1,3 +1,10 @@
+## AAA ⯇⯈ BBB ⮜⮞ CCC 🡄🡆 DDD🠜🠞 EEE 🠈🠊 FFF 🠄🠆 GGG 🡸🡺 HHH 🡨🡪 III 🡠🡢 JJJ
+
+## ⏴⏵🡠🡢◀▶◁▷
+
+## M ⏴⏵ N 🡠🡢 O ◀▶ P ◁▷ R
+
+
 # Standard Design Patterns include: 
 - Architectural Patterns
 - Creational Patterns
@@ -27,15 +34,6 @@
   - Template Method
   - Visitor
   
-## A ◀️▶ B ⯇⯈ C ⮜⮞ D 🡄🡆 E🠜🠞 F 🠈🠊 G 🠄🠆 H 🡸🡺 J 🡨🡪 K 🡠🡢 L
-
-## ⏴⏵🡠🡢◀▶◁▷
-
-## M ⏴⏵ N 🡠🡢 O ◀▶ P ◁▷ R
-
-
-## AAA BBB CCC  
-
 ---
 	
 ## Architectural Patterns
@@ -120,10 +118,12 @@ Bridge examples in Java:
 ---
 
 ## Adapter <-> Proxy <-> Decorator <-> Facade
-  Adapter provides a different interface to its subject.  
-    Proxy provides    the same interface.  
-Decorator provides an enhanced interface.  
-Facade    provides   a simpler interface.
+| Pattern   | Provides interface                 |
+|-----------|------------------------------------|
+| Adapter   | different interface to its subject |
+| Proxy     | the same interface                 |
+| Decorator | an enhanced interface              |
+| Facade    | a simpler interface                |
 
 ---
 
@@ -187,14 +187,16 @@ Memento examples in Java:
 ---
 
 ## Template Method <-> Strategy
-- Template Method uses inheritance to vary part of an algorithm.
-- Strategy        uses delegation  to vary the entire algorithm.
+| Pattern         |                  |                              |
+|-----------------|------------------|------------------------------|
+| Template Method | uses inheritance | to vary part of an algorithm |
+| Strategy        | uses delegation  | to vary the entire algorithm |
 
-Template Method examples in Java:
+**Template Method** examples in **Java**:
  - AbstractList, AbstractSet, AbstractCollection,
  - InputStream, OutputStream, Reader, Writer
    
-Strategy examples in Java:
+**Strategy** examples in **Java**:
  - Comparator
  - Function, Predicate, Consumer, Supplier
  - Executor, ExecutorService
