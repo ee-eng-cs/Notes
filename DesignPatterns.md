@@ -1,9 +1,6 @@
 ## AAA ⯇⯈ BBB ⮜⮞ CCC 🡄🡆 DDD🠜🠞 EEE 🠈🠊 FFF 🠄🠆 GGG 🡸🡺 HHH 🡨🡪 III 🡠🡢 JJJ
 
-## ⏴⏵🡠🡢◀▶◁▷
-
-## M ⏴⏵ N 🡠🡢 O ◀▶ P ◁▷ R
-
+## KKK ⏴⏵ LLL 🡠🡢 MMM ◀▶ NNN ◁▷ OOO
 
 # Standard Design Patterns include: 
 - Architectural Patterns
@@ -99,7 +96,7 @@ Abstract Factory emphasizes a family of product objects (either simple or comple
 - Adapter: impedance-match a legacy component to a new system
 - Bridge: decouple interface from implementation; move beyond encapsulation to insulation
 
-Adapter examples in Java:
+✔️**Adapter** examples in **Java**:
  - java.util.Arrays#asList() (adapts array to List interface)
  - java.util.Collections#list(Enumeration) and Collections#enumeration(Collection)
  - java.io.InputStreamReader (adapts InputStream to Reader)
@@ -107,7 +104,7 @@ Adapter examples in Java:
  - java.nio.channels.Channels#newInputStream(ReadableByteChannel) (adapts channel to stream)
  - javax.xml.bind.annotation.adapters.XmlAdapter (for XML marshaling/unmarshaling)
 
-Bridge examples in Java:
+✔️**Bridge** examples in **Java**:
  - java.nio.Buffer (Abstraction) and its views (ByteBuffer, CharBuffer, etc.)
  - Logger abstraction and Handler implementations in java.util.logging
  - java.sql.Driver (Abstraction) and its implementations (Bridge between JDBC API and database drivers)
@@ -132,14 +129,14 @@ Recursive composition patterns: Composite, Decorator, and Chain of Responsibilit
 - Composite: recursive composition by coupling the aggregate class to a common abstraction
 - Decorator: recursive wrappering that supports client-specified incremental embellishment
 
-Composite examples in Java:
+✔️**Composite** examples in **Java**:
  - java.util.List
    - (when used to build tree structures, e.g., List<List<...>>)
  - javax.swing.JComponent
  - java.awt.Container
  - org.w3c.dom.Node
 
-Decorator examples in Java:
+✔️**Decorator** examples in **Java**:
  - java.util.logging.Logger
    - (Logger can be decorated with Handlers and Filters to add additional behavior)   
  - java.util.Collections#checkedList, synchronizedList, unmodifiableList
@@ -153,7 +150,7 @@ Decorator examples in Java:
  - java.awt.Component
    - (the java.awt.ScrollPane decorates a component to add scrolling)
 
-Chain of Responsibility examples in Java:
+✔️**Chain of Responsibility** examples in **Java**:
  - java.util.logging.Handler (logging events passed through a chain of handlers)
  - jakarta.servlet.Filter and jakarta.servlet.FilterChain ( FilterChain::doFilter(servletRequest, servletResponse)' )
  - java.nio.file.FileVisitor (the visitFile and related methods are called in a chain for file tree traversal)
@@ -170,14 +167,14 @@ They act as magic tokens to be passed around and invoked at a later time.
 
 Memento - restore an object back to its previous state (e.g. "undo" or "rollback" operations)
 
-Command examples in Java:
+✔️**Command** examples in **Java**:
  - Runnable, Callable, Executor, ExecutorService
  - Lambda expressions implementing commands (Runnable/Callable)
  - java.awt.event.ActionListener
  - javax.swing.AbstractAction
  - SwingUtilities.invokeLater
 
-Memento examples in Java:
+✔️**Memento** examples in **Java**:
  - java.io.Serializable (object state snapshot/restore)
  - java.nio.ByteBuffer.mark/reset
  - java.util.Stack (for saving/restoring states)
@@ -192,11 +189,11 @@ Memento examples in Java:
 | Template Method | uses inheritance | to vary part of an algorithm |
 | Strategy        | uses delegation  | to vary the entire algorithm |
 
-**Template Method** examples in **Java**:
+✔️****Template Method** examples in **Java**:
  - AbstractList, AbstractSet, AbstractCollection,
  - InputStream, OutputStream, Reader, Writer
    
-**Strategy** examples in **Java**:
+✔️****Strategy** examples in **Java**:
  - Comparator
  - Function, Predicate, Consumer, Supplier
  - Executor, ExecutorService
@@ -212,7 +209,7 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
  - Factory Method: dynamic (decoupled) creation through inheritance
  - Prototype: dynamic (decoupled) creation through delegation	 
 	 
-Prototype examples in Java:
+✔️**Prototype** examples in **Java**:
  - Object#clone()
  - Cloneable
  - Date (via clone())
@@ -236,7 +233,7 @@ Factory Method
 ## Strategy <-> State
 Strategy is a bind-once pattern, whereas State is more dynamic.
 
-State examples in Java:
+✔️**State** examples in **Java**:
  - java.util.Iterator (internal state machine: hasNext/next)
  - java.util.Scanner (internal parsing states)
  - javax.swing.JToggleButton (state transitions)
@@ -248,7 +245,7 @@ State examples in Java:
  - Element.accept()             --> ElementOne.accept()
   - Visitor.visit(ElementOne eo) --> VisitorOne.visit(ElementOne eo)
 
-Visitor examples in Java:
+✔️**Visitor** examples in **Java**:
  - java.nio.file.FileVisitor
  - javax.lang.model.element.ElementVisitor
  - javax.lang.model.type.TypeVisitor
@@ -267,20 +264,20 @@ Flyweight: use sharing to optimize the use of lots of "little" objects
 
 ---
 
-Design Patterns used in the Spring Framework:
- - Singleton: Singleton-scoped beans
- - Factory: Bean Factory classes
- - Prototype: Prototype-scoped beans
- - Adapter: Spring Web and Spring MVC
- - Proxy: Spring Aspect Oriented Programming support
- - Template Method: JdbcTemplate, HibernateTemplate, etc.
- - Front Controller: Spring MVC DispatcherServlet
- - Data Access Object: Spring DAO support
- - Model View Controller: Spring MVC
+✔️**Design Patterns** used in the **Spring Framework**:
+ - **Singleton**: Singleton-scoped beans
+ - **Factory**: Bean Factory classes
+ - **Prototype**: Prototype-scoped beans
+ - **Adapter**: Spring Web and Spring MVC
+ - **Proxy**: Spring Aspect Oriented Programming support
+ - **Template Method**: JdbcTemplate, HibernateTemplate, etc.
+ - **Front Controller**: Spring MVC DispatcherServlet
+ - **Data Access Object**: Spring DAO support
+ - *8Model View Controller**: Spring MVC
 
 ---
 
-Inversion of Control can be achieved through various mechanisms such as:
+**Inversion of Control** can be achieved through various mechanisms such as:
  - Strategy design pattern
  - Service Locator pattern
  - Factory pattern
@@ -289,6 +286,7 @@ Inversion of Control can be achieved through various mechanisms such as:
 ---
 
 D:\DOC\Architecture\Design Patterns\Design Class Diagrams.htm
+
  - https://refactoring.guru/design-patterns/catalog
  - https://www.baeldung.com/tag/pattern
  - http://www.vincehuston.org/dp/
@@ -296,11 +294,11 @@ D:\DOC\Architecture\Design Patterns\Design Class Diagrams.htm
 
 ---
 
-Command Query Responsibility Segregation (CQRS https://martinfowler.com/bliki/CQRS.html)
- - Query Model reads from database
- - Command Model updates database
+**Command Query Responsibility Segregation** (CQRS https://martinfowler.com/bliki/CQRS.html)
+ - **Query Model** reads from database
+ - **Command Model** updates database
 
-A common example of an application that uses Event Sourcing is a version control system.
+A common example of an application that uses **Event Sourcing** is a version control system.
 
 ---
 
@@ -324,11 +322,11 @@ A pattern language for MICROSERVICES: https://microservices.io/patterns/index.ht
 	Depend on abstractions, not on concretions.
  
 ## Package cohesion principles ##
-1. The Release Reuse Equivalency Principle
+- The Release Reuse Equivalency Principle
 	The granule of reuse is the granule of release.
-2. The Common Closure Principle
+- The Common Closure Principle
 	Classes that change together are packaged together.
-3. The Common Reuse Principle
+- The Common Reuse Principle
 	Classes that are used together are packaged together.
 	
 Component Cohesion https://devlead.io/DevTips/PrinciplesOfComponentCohesion	
@@ -336,12 +334,12 @@ Component Cohesion https://devlead.io/DevTips/PrinciplesOfComponentCohesion
 ---
 
 ## Couplings between packages principles
-1. The Acyclic Dependencies Principle
-	The dependency graph of packages must have no cycles.
-2. The Stable Dependencies Principle
-	Depend in the direction of stability.
-3. The Stable Abstractions Principle
-	Abstractness increases with stability.
+- The **Acyclic Dependencies Principle**
+   - The dependency graph of packages must have no cycles.
+- The **Stable Dependencies Principle**
+   - Depend in the direction of stability.
+- The **Stable Abstractions Principle**
+   - Abstractness increases with stability.
 	
 Component Coupling https://devlead.io/DevTips/PrinciplesOfComponentCoupling
 	
@@ -349,8 +347,8 @@ Component Coupling https://devlead.io/DevTips/PrinciplesOfComponentCoupling
 ---
 
 ## Dependency Inversion Principle:
-1. High level modules should not depend upon low level modules. Both should depend upon abstractions. 
-2. Abstractions should not depend upon details. Details should depend upon abstractions
+- High level modules should not depend upon low level modules. Both should depend upon abstractions. 
+- Abstractions should not depend upon details. Details should depend upon abstractions
 
 ---
 
