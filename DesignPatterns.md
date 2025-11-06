@@ -256,6 +256,7 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
 
 ## Visitor implements "double dispatch".
 
+|------------------------------|---|---------------------------------|
 | Element.accept()             | 🡆 | ElementOne.accept()             |
 | Visitor.visit(ElementOne eo) | 🡆 | VisitorOne.visit(ElementOne eo) |
 
