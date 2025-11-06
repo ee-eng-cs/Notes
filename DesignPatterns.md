@@ -54,20 +54,18 @@ https://www.ou.nl/documents/40554/791670/IM0203_03.pdf
  - lazy initialization
  - global access
  
-Now Singleton is an antipattern - it makes applications more brittle and harder to test.
-
 ---
 
-It starts out using Factory Method and it evolves toward:
- - Abstract Factory
- - Prototype
- - Builder
+It starts out using **Factory Method** and it evolves toward:
+ - **Abstract Factory**
+ - **Prototype**
+ - **Builder**
  
-Factory Method pattern:
+**Factory Method** pattern:
  - the factory method is a method
  - it uses inheritance and relies on a subclass to handle the desired object instantiation
 
-Abstract Factory pattern:
+**Abstract Factory** pattern:
  - the abstract factory is an object
  - a class delegates the responsibility of object instantiation to another object via composition
  - one interface for creating a family of products
@@ -93,19 +91,26 @@ Abstract Factory emphasizes a family of product objects (either simple or comple
 - Bridge: decouple interface from implementation; move beyond encapsulation to insulation
 
 ✔️**Adapter** examples in **Java**:
- - java.util.Arrays#asList() (adapts array to List interface)
+ - java.util.Arrays#asList()
+   - (adapts array to List interface)
  - java.util.Collections#list(Enumeration) and Collections#enumeration(Collection)
- - java.io.InputStreamReader (adapts InputStream to Reader)
- - java.io.OutputStreamWriter (adapts OutputStream to Writer)
- - java.nio.channels.Channels#newInputStream(ReadableByteChannel) (adapts channel to stream)
- - javax.xml.bind.annotation.adapters.XmlAdapter (for XML marshaling/unmarshaling)
+ - java.io.InputStreamReader
+   - (adapts InputStream to Reader)
+ - java.io.OutputStreamWriter
+   - (adapts OutputStream to Writer)
+ - java.nio.channels.Channels#newInputStream(ReadableByteChannel)
+   - (adapts channel to stream)
+ - javax.xml.bind.annotation.adapters.XmlAdapter
+   - (for XML marshaling/unmarshaling)
 
 ✔️**Bridge** examples in **Java**:
  - java.nio.Buffer (Abstraction) and its views (ByteBuffer, CharBuffer, etc.)
  - Logger abstraction and Handler implementations in java.util.logging
- - java.sql.Driver (Abstraction) and its implementations (Bridge between JDBC API and database drivers)
+ - java.sql.Driver (Abstraction) and its implementations
+   - (Bridge between JDBC API and database drivers)
  - javax.swing.JComboBox (Abstraction) and its ComboBoxModel (Implementation)
- - javax.swing.plaf.ComponentUI and Swing components (look-and-feel decoupling)
+ - javax.swing.plaf.ComponentUI and Swing components
+   - (look-and-feel decoupling)
  - java.awt.Graphics (Abstraction) and underlying OS-specific drawing (Implementation)
 
 ---
@@ -147,12 +152,18 @@ Recursive composition patterns: Composite, Decorator, and Chain of Responsibilit
    - (the java.awt.ScrollPane decorates a component to add scrolling)
 
 ✔️**Chain of Responsibility** examples in **Java**:
- - java.util.logging.Handler (logging events passed through a chain of handlers)
- - jakarta.servlet.Filter and jakarta.servlet.FilterChain ( FilterChain::doFilter(servletRequest, servletResponse)' )
- - java.nio.file.FileVisitor (the visitFile and related methods are called in a chain for file tree traversal)
- - java.util.stream.Stream processing pipelines (each intermediate operation forms a chain)
- - java.lang.invoke.MethodHandle combinators (method handles can be chained for dynamic invocation)
- - java.util.concurrent.Flow.Processor (in reactive streams, processors form a chain between publishers and subscribers)
+ - java.util.logging.Handler
+   - (logging events passed through a chain of handlers)
+ - jakarta.servlet.Filter and jakarta.servlet.FilterChain
+   - (FilterChain::doFilter(servletRequest, servletResponse)' )
+ - java.nio.file.FileVisitor
+   - (the visitFile and related methods are called in a chain for file tree traversal)
+ - java.util.stream.Stream processing pipelines
+   - (each intermediate operation forms a chain)
+ - java.lang.invoke.MethodHandle combinators
+   - (method handles can be chained for dynamic invocation)
+ - java.util.concurrent.Flow.Processor
+   - (in reactive streams, processors form a chain between publishers and subscribers)
 
 ---
 
@@ -171,9 +182,11 @@ Memento - restore an object back to its previous state (e.g. "undo" or "rollback
  - SwingUtilities.invokeLater
 
 ✔️**Memento** examples in **Java**:
- - java.io.Serializable (object state snapshot/restore)
+ - java.io.Serializable
+   - (object state snapshot/restore)
  - java.nio.ByteBuffer.mark/reset
- - java.util.Stack (for saving/restoring states)
+ - java.util.Stack
+   - (for saving/restoring states)
  - java.util.prefs.Preferences API backup/restore
  - javax.swing.UndoManager, UndoableEdit
 
@@ -230,16 +243,21 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
 **Strategy** is a bind-once pattern, whereas **State** is more dynamic.
 
 ✔️**State** examples in **Java**:
- - java.util.Iterator (internal state machine: hasNext/next)
- - java.util.Scanner (internal parsing states)
- - javax.swing.JToggleButton (state transitions)
- - javax.swing.text.JTextComponent (caret and selection states)
+ - java.util.Iterator
+   - (internal state machine: hasNext/next)
+ - java.util.Scanner
+   - (internal parsing states)
+ - javax.swing.JToggleButton
+   - (state transitions)
+ - javax.swing.text.JTextComponent
+   - (caret and selection states)
 
 ---
 
 ## Visitor implements "double dispatch".
- - Element.accept()             --> ElementOne.accept()
-  - Visitor.visit(ElementOne eo) --> VisitorOne.visit(ElementOne eo)
+
+| Element.accept()             | 🡆 | ElementOne.accept()             |
+| Visitor.visit(ElementOne eo) | 🡆 | VisitorOne.visit(ElementOne eo) |
 
 ✔️**Visitor** examples in **Java**:
  - java.nio.file.FileVisitor
