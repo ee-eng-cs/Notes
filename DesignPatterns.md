@@ -26,26 +26,35 @@
   - Strategy
   - Template Method
   - Visitor
+  
+## A ◀️▶ B ⯇⯈ C ⮜⮞ D 🡄🡆 E🠜🠞 F 🠈🠊 G 🠄🠆 H 🡸🡺 J 🡨🡪 K 🡠🡢 L
+
+## ⏴⏵🡠🡢◀▶◁▷
+
+## M ⏴⏵ N 🡠🡢 O ◀▶ P ◁▷ R
+
+
+## AAA BBB CCC  
 
 ---
 	
 ## Architectural Patterns
 https://www.ou.nl/documents/40554/791670/IM0203_03.pdf
 
-1. Layered pattern:
- - Presentation layer(aka UI layer)
- - Application layer (aka service layer)
- - Business logic layer (aka domain layer)
- - Data access layer (aka persistence layer)
-2. Client-server pattern
-3, Master-slave pattern
-4. Pipe-filter pattern
-5. Broker pattern
-6. Peer-to-peer pattern
-7. Event-bus pattern
-8. Model-view-controller pattern
-9. Data access object pattern
-10. Interpreter pattern
+- Layered pattern:
+  - Presentation layer(aka UI layer)
+  - Application layer (aka service layer)
+  - Business logic layer (aka domain layer)
+  - Data access layer (aka persistence layer)
+- Client-server pattern
+- Master-slave pattern
+- Pipe-filter pattern
+- Broker pattern
+- Peer-to-peer pattern
+- Event-bus pattern
+- Model-view-controller pattern
+- Data access object pattern
+- Interpreter pattern
 
 ---
 
@@ -53,6 +62,7 @@ https://www.ou.nl/documents/40554/791670/IM0203_03.pdf
  - single instance enforcement
  - lazy initialization
  - global access
+ 
 Now Singleton is an antipattern - it makes applications more brittle and harder to test.
 
 ---
@@ -77,11 +87,12 @@ Abstract Factory pattern:
 Builder focuses on constructing a complex object step by step.  
 It parses a complex representation, creates one of several targets.  
 Abstract Factory emphasizes a family of product objects (either simple or complex).
+| Pattern          | Returns the product |
+|------------------|---------------------|
+| Builder          | as a final step     |
+| Abstract Factory | immediately         |
 
-- Builder          returns the product as a final step
-- Abstract Factory returns the product immediately
-
---
+---
 
 ## Adapter <-> Bridge
 - Adapter makes things work after  they're designed.
@@ -122,19 +133,25 @@ Recursive composition patterns: Composite, Decorator, and Chain of Responsibilit
 - Decorator: recursive wrappering that supports client-specified incremental embellishment
 
 Composite examples in Java:
- - java.util.List (when used to build tree structures, e.g., List<List<...>>)
+ - java.util.List
+   - (when used to build tree structures, e.g., List<List<...>>)
  - javax.swing.JComponent
  - java.awt.Container
  - org.w3c.dom.Node
 
 Decorator examples in Java:
- - java.util.logging.Logger (Logger can be decorated with Handlers and Filters to add additional behavior)   
- - java.util.Collections#checkedList, synchronizedList, unmodifiableList (decorates lists with additional behavior)
+ - java.util.logging.Logger
+   - (Logger can be decorated with Handlers and Filters to add additional behavior)   
+ - java.util.Collections#checkedList, synchronizedList, unmodifiableList
+   - (decorates lists with additional behavior)
  - java.io.InputStream, java.io.OutputStream, java.io.Reader, java.io.Writer
-  - (e.g., BufferedInputStream, FilterInputStream, DataInputStream chain decorators over InputStream)
- - java.nio.channels.Channels.newInputStream/newOutputStream (wraps and decorates channels as streams)
- - jakarta.servlet.http.HttpServletRequestWrapper, HttpServletResponseWrapper (servlet API wrappers decorate requests/responses)
- - java.awt.Component (the java.awt.ScrollPane decorates a component to add scrolling)
+   - (e.g., BufferedInputStream, FilterInputStream, DataInputStream chain decorators over InputStream)
+ - java.nio.channels.Channels.newInputStream/newOutputStream
+   - (wraps and decorates channels as streams)
+ - jakarta.servlet.http.HttpServletRequestWrapper, HttpServletResponseWrapper
+   - (servlet API wrappers decorate requests/responses)
+ - java.awt.Component
+   - (the java.awt.ScrollPane decorates a component to add scrolling)
 
 Chain of Responsibility examples in Java:
  - java.util.logging.Handler (logging events passed through a chain of handlers)
@@ -169,7 +186,7 @@ Memento examples in Java:
 
 ---
 
-#3 Template Method <-> Strategy
+## Template Method <-> Strategy
 - Template Method uses inheritance to vary part of an algorithm.
 - Strategy        uses delegation  to vary the entire algorithm.
 
@@ -191,7 +208,7 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
 
 ## Factory Method <-> Prototype
  - Factory Method: dynamic (decoupled) creation through inheritance
- -     Prototype: dynamic (decoupled) creation through delegation	 
+ - Prototype: dynamic (decoupled) creation through delegation	 
 	 
 Prototype examples in Java:
  - Object#clone()
@@ -359,8 +376,7 @@ https://en.wikipedia.org/wiki/Coupling_(computer_programming)
 
 ---
 
-## Knowledge about Cloud
-The common patterns in distributed systems:
+## Common patterns in distributed systems:
  - configuration management
  - service discovery
  - circuit breakers
