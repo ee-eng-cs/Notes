@@ -1,8 +1,7 @@
-## AAA ⯇⯈ BBB ⮜⮞ CCC 🡄🡆 DDD🠜🠞 EEE 🠈🠊 FFF 🠄🠆 GGG 🡸🡺 HHH 🡨🡪 III 🡠🡢 JJJ
+### AAA ⯇⯈ BBB ⮜⮞ CCC 🡄🡆 DDD🠜🠞 EEE 🠈🠊 FFF 🠄🠆 GGG 🡸🡺 HHH 🡨🡪 III 🡠🡢 JJJ
+### KKK ⏴⏵ LLL 🡠🡢 MMM ◀▶ NNN ◁▷ OOO
 
-## KKK ⏴⏵ LLL 🡠🡢 MMM ◀▶ NNN ◁▷ OOO
-
-# Standard Design Patterns include: 
+## Standard Design Patterns include: 
 - Architectural Patterns
 - Creational Patterns
   - Abstract Factory
@@ -78,7 +77,7 @@ Abstract Factory pattern:
 
 ---
 
-## Builder <-> Abstract Factory
+## Builder ⮜⮞ Abstract Factory
 Builder focuses on constructing a complex object step by step.  
 It parses a complex representation, creates one of several targets.  
 Abstract Factory emphasizes a family of product objects (either simple or complex).
@@ -89,7 +88,7 @@ Abstract Factory emphasizes a family of product objects (either simple or comple
 
 ---
 
-## Adapter <-> Bridge
+## Adapter ⮜⮞ Bridge
 - Adapter makes things work after  they're designed.
 - Bridge  makes things work before they're designed.
 
@@ -114,7 +113,7 @@ Abstract Factory emphasizes a family of product objects (either simple or comple
 
 ---
 
-## Adapter <-> Proxy <-> Decorator <-> Facade
+## Adapter ⮜⮞ Proxy ⮜⮞ Decorator ⮜⮞ Facade
 | Pattern   | Provides interface                 |
 |-----------|------------------------------------|
 | Adapter   | different interface to its subject |
@@ -160,7 +159,7 @@ Recursive composition patterns: Composite, Decorator, and Chain of Responsibilit
 
 ---
 
-## Command <-> Memento
+## Command ⮜⮞ Memento
 They act as magic tokens to be passed around and invoked at a later time.
  - In Command the token represents a request.
  - In Memento the token represents the internal state of an object at a particular time.
@@ -183,17 +182,17 @@ Memento - restore an object back to its previous state (e.g. "undo" or "rollback
 
 ---
 
-## Template Method <-> Strategy
+## Template Method ⮜⮞ Strategy
 | Pattern         |                  |                              |
 |-----------------|------------------|------------------------------|
 | Template Method | uses inheritance | to vary part of an algorithm |
 | Strategy        | uses delegation  | to vary the entire algorithm |
 
-✔️****Template Method** examples in **Java**:
+✔️**Template Method** examples in **Java**:
  - AbstractList, AbstractSet, AbstractCollection,
  - InputStream, OutputStream, Reader, Writer
    
-✔️****Strategy** examples in **Java**:
+✔️**Strategy** examples in **Java**:
  - Comparator
  - Function, Predicate, Consumer, Supplier
  - Executor, ExecutorService
@@ -205,7 +204,7 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
 
 ---
 
-## Factory Method <-> Prototype
+## Factory Method ⮜⮞ Prototype
  - Factory Method: dynamic (decoupled) creation through inheritance
  - Prototype: dynamic (decoupled) creation through delegation	 
 	 
@@ -217,21 +216,21 @@ Collections.sort and Arrays.sort accept a Comparator as a parameter to define th
 
 ---
 
-## Factory Method <-> Template Method
-Template Method
+## Factory Method ⮜⮞ Template Method
+**Template Method**
  - BEHAVIORAL pattern
  - defines the steps of an algorithm
  - leaves the task of implementing them to subclasses
  
-Factory Method
+**Factory Method**
  - CREATIONAL pattern
  - A superclass defines an interface to create an object
  - subclasses decide which concrete class to instantiate
 
 ---
 
-## Strategy <-> State
-Strategy is a bind-once pattern, whereas State is more dynamic.
+## Strategy ⮜⮞ State
+**Strategy** is a bind-once pattern, whereas **State** is more dynamic.
 
 ✔️**State** examples in **Java**:
  - java.util.Iterator (internal state machine: hasNext/next)
