@@ -1,7 +1,4 @@
-### AAA ⯇⯈ BBB ⮜⮞ CCC 🡄🡆 DDD🠜🠞 EEE 🠈🠊 FFF 🠄🠆 GGG 🡸🡺 HHH 🡨🡪 III 🡠🡢 JJJ
-### KKK ⏴⏵ LLL 🡠🡢 MMM ◀▶ NNN ◁▷ OOO
-
-## Standard Design Patterns include: 
+## Standard Design Patterns include
 - Architectural Patterns
 - Creational Patterns
   - Abstract Factory
@@ -272,7 +269,7 @@ Flyweight: use sharing to optimize the use of lots of "little" objects
  - **Template Method**: JdbcTemplate, HibernateTemplate, etc.
  - **Front Controller**: Spring MVC DispatcherServlet
  - **Data Access Object**: Spring DAO support
- - *8Model View Controller**: Spring MVC
+ - **Model View Controller**: Spring MVC
 
 ---
 
@@ -281,15 +278,6 @@ Flyweight: use sharing to optimize the use of lots of "little" objects
  - Service Locator pattern
  - Factory pattern
  - Dependency Injection
-
----
-
-D:\DOC\Architecture\Design Patterns\Design Class Diagrams.htm
-
- - https://refactoring.guru/design-patterns/catalog
- - https://www.baeldung.com/tag/pattern
- - http://www.vincehuston.org/dp/
- - https://www.journaldev.com/1827/java-design-patterns-example-tutorial
 
 ---
 
@@ -353,7 +341,7 @@ Component Coupling https://devlead.io/DevTips/PrinciplesOfComponentCoupling
 
 ## Best: HIGH cohesion and LOW coupling
 
-Types of cohesion:
+Types of **cohesion**:
  - Coincidental cohesion (low) 
  - Logical cohesion
  - Temporal cohesion
@@ -362,7 +350,7 @@ Types of cohesion:
  - Sequential cohesion
  - Functional cohesion (high)
 
-Types of coupling:
+Types of **coupling**:
  - Content coupling (high)
  - Common coupling
  - External coupling
@@ -387,5 +375,14 @@ https://en.wikipedia.org/wiki/Coupling_(computer_programming)
  - leadership election
  - distributed sessions
  - cluster state
+
+---
+
+ - https://refactoring.guru/design-patterns/catalog
+ - https://www.baeldung.com/tag/pattern
+ - http://www.vincehuston.org/dp/
+ - https://www.journaldev.com/1827/java-design-patterns-example-tutorial
+
+D:\DOC\Architecture\Design Patterns
 
 ---
